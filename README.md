@@ -3,10 +3,9 @@
 ## 📋 Project Overview
 
 A comprehensive job portal application built with Next.js 13, featuring a complete DevOps pipeline with Docker containerization, CI/CD via GitHub Actions, and Kubernetes deployment configurations. This project demonstrates modern cloud-native development practices.
-
-**Developer:** Ahsaan Uddin  
-**Repository:** [https://github.com/ahsaan-uddin/job-portal](https://github.com/ahsaan-uddin/job-portal)  
-**Container Registry:** [GHCR - job-portal](https://github.com/ahsaan-uddin/job-portal/pkgs/container/job-portal)  
+  
+**Repository:** [https://github.com/ahsaan-uddin/job-portal](https://github.com/ahsaan-uddin/job-portal-next.js-wexa-ai.git)  
+**Container Registry:** [GHCR - job-portal](ghcr.io/ahsaan-uddin/job-portal-next.js-wexa-ai:3895665a311b678d333d50fe1b135bac04f0d82a)  
 **Assignment:** Wexa AI DevOps Internship Assessment
 
 ---
@@ -85,7 +84,7 @@ job-portal/
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/ahsaan-uddin/job-portal.git
+   git clone https://github.com/ahsaan-uddin/job-portal-next.js-wexa-ai.git
    cd job-portal
    ```
 
@@ -217,9 +216,9 @@ The automated CI/CD pipeline builds, tests, and deploys the application on every
 8. **Image Tagging:** Immutable tags with commit SHA and latest
 
 #### Image Tagging Strategy
-- `ghcr.io/ahsaan-uddin/job-portal:latest` - Latest stable build
-- `ghcr.io/ahsaan-uddin/job-portal:[commit-sha]` - Immutable version for rollbacks
-- `ghcr.io/ahsaan-uddin/job-portal:[branch-name]` - Branch-specific builds
+- `ghcr.io/ahsaan-uddin/job-portal-next.js-wexa-ai:latest` - Latest stable build
+- `ghcr.io/ahsaan-uddin/job-portal-next.js-wexa-ai:[commit-sha]` - Immutable version for rollbacks
+- `ghcr.io/ahsaan-uddin/job-portal-next.js-wexa-ai:[branch-name]` - Branch-specific builds
 
 #### Workflow File
 Located at: `.github/workflows/docker-build-push.yml`
