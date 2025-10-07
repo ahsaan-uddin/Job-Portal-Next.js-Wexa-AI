@@ -1,3 +1,6 @@
+# .dockerignore
+Dockerfile
+.dockerignore
 node_modules
 npm-debug.log
 .git
@@ -7,3 +10,4 @@ README.md
 .nyc_output
 coverage
 .DS_Store
+.next

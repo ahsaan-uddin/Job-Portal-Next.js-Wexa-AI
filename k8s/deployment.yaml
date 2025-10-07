@@ -18,26 +18,31 @@ spec:
       - name: job-portal
         image: ghcr.io/your-username/job-portal:latest
         ports:
-        - containerPort: 80
+        - containerPort: 3000
         env:
         - name: NODE_ENV
           value: "production"
+        - name: DATABASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: job-portal-secrets
+              key: database-url
         resources:
           requests:
-            memory: "64Mi"
-            cpu: "50m"
-          limits:
-            memory: "128Mi"
+            memory: "256Mi"
             cpu: "100m"
+          limits:
+            memory: "512Mi"
+            cpu: "200m"
         livenessProbe:
           httpGet:
-            path: /
-            port: 80
-          initialDelaySeconds: 10
+            path: /api/health
+            port: 3000
+          initialDelaySeconds: 30
           periodSeconds: 10
         readinessProbe:
           httpGet:
-            path: /
-            port: 80
+            path: /api/health
+            port: 3000
           initialDelaySeconds: 5
           periodSeconds: 5
